@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "PV forecast",
+        "description": "Hourly PV production forecast from Open-Meteo irradiance data.",
+        "data": {
+          "name": "Name",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "altitude": "Altitude (m)",
+          "days_ahead": "Days ahead",
+          "strings": "Strings"
+        },
+        "data_description": {
+          "strings": "List of strings. Each has name, panels (count) and orientations: a list of panel parameters (peak_power_wp, tilt_deg, azimuth_from_north_deg; optionally performance_ratio, temp_coefficient, t_ref, noct). With several orientations, the weakest panel limits the string.",
+          "days_ahead": "Days after today to forecast (sensors cover today to day after tomorrow).",
+          "altitude": "Altitude above sea level in metres."
+        }
+      }
+    },
+    "error": {
+      "invalid_strings": "Invalid strings definition — check names, panel counts and orientation parameters.",
+      "invalid_location": "Invalid latitude or longitude."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "PV forecast",
+        "data": {
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "altitude": "Altitude (m)",
+          "days_ahead": "Days ahead",
+          "strings": "Strings"
+        },
+        "data_description": {
+          "strings": "List of strings. Each has name, panels (count) and orientations: a list of panel parameters (peak_power_wp, tilt_deg, azimuth_from_north_deg; optionally performance_ratio, temp_coefficient, t_ref, noct). With several orientations, the weakest panel limits the string.",
+          "days_ahead": "Days after today to forecast (sensors cover today to day after tomorrow).",
+          "altitude": "Altitude above sea level in metres."
+        }
+      }
+    },
+    "error": {
+      "invalid_strings": "Invalid strings definition — check names, panel counts and orientation parameters.",
+      "invalid_location": "Invalid latitude or longitude."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "energy_production_today": {
+        "name": "Estimated energy production - today"
+      },
+      "energy_production_today_remaining": {
+        "name": "Estimated energy production - remaining today"
+      },
+      "energy_production_tomorrow": {
+        "name": "Estimated energy production - tomorrow"
+      },
+      "energy_production_d2": {
+        "name": "Estimated energy production - day after tomorrow"
+      },
+      "power_highest_peak_time_today": {
+        "name": "Highest power peak time - today"
+      },
+      "power_highest_peak_time_tomorrow": {
+        "name": "Highest power peak time - tomorrow"
+      },
+      "power_production_now": {
+        "name": "Estimated power production - now"
+      },
+      "power_production_next_hour": {
+        "name": "Estimated power production - next hour"
+      },
+      "power_production_next_12hours": {
+        "name": "Estimated power production - next 12 hours"
+      },
+      "power_production_next_24hours": {
+        "name": "Estimated power production - next 24 hours"
+      },
+      "energy_current_hour": {
+        "name": "Estimated energy production - this hour"
+      },
+      "energy_next_hour": {
+        "name": "Estimated energy production - next hour"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Předpověď FVE",
+        "description": "Hodinová předpověď výroby FVE z dat o slunečním záření Open-Meteo.",
+        "data": {
+          "name": "Název",
+          "latitude": "Zeměpisná šířka",
+          "longitude": "Zeměpisná délka",
+          "altitude": "Nadmořská výška (m)",
+          "days_ahead": "Počet dní dopředu",
+          "strings": "Stringy"
+        },
+        "data_description": {
+          "strings": "Seznam stringů. Každý má name, panels (počet panelů) a orientations: seznam parametrů panelu (peak_power_wp, tilt_deg, azimuth_from_north_deg; volitelně performance_ratio, temp_coefficient, t_ref, noct). Při více orientacích string omezuje nejslabší panel.",
+          "days_ahead": "Počet dní po dnešku, které se mají předpovídat (senzory pokrývají dnešek až pozítří).",
+          "altitude": "Nadmořská výška v metrech."
+        }
+      }
+    },
+    "error": {
+      "invalid_strings": "Neplatná definice stringů — zkontrolujte názvy, počty panelů a parametry orientací.",
+      "invalid_location": "Neplatná zeměpisná šířka nebo délka."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Předpověď FVE",
+        "data": {
+          "latitude": "Zeměpisná šířka",
+          "longitude": "Zeměpisná délka",
+          "altitude": "Nadmořská výška (m)",
+          "days_ahead": "Počet dní dopředu",
+          "strings": "Stringy"
+        },
+        "data_description": {
+          "strings": "Seznam stringů. Každý má name, panels (počet panelů) a orientations: seznam parametrů panelu (peak_power_wp, tilt_deg, azimuth_from_north_deg; volitelně performance_ratio, temp_coefficient, t_ref, noct). Při více orientacích string omezuje nejslabší panel.",
+          "days_ahead": "Počet dní po dnešku, které se mají předpovídat (senzory pokrývají dnešek až pozítří).",
+          "altitude": "Nadmořská výška v metrech."
+        }
+      }
+    },
+    "error": {
+      "invalid_strings": "Neplatná definice stringů — zkontrolujte názvy, počty panelů a parametry orientací.",
+      "invalid_location": "Neplatná zeměpisná šířka nebo délka."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "energy_production_today": {
+        "name": "Odhad výroby - dnes"
+      },
+      "energy_production_today_remaining": {
+        "name": "Odhad výroby - zbytek dne"
+      },
+      "energy_production_tomorrow": {
+        "name": "Odhad výroby - zítra"
+      },
+      "energy_production_d2": {
+        "name": "Odhad výroby - pozítří"
+      },
+      "power_highest_peak_time_today": {
+        "name": "Čas špičky výkonu - dnes"
+      },
+      "power_highest_peak_time_tomorrow": {
+        "name": "Čas špičky výkonu - zítra"
+      },
+      "power_production_now": {
+        "name": "Odhad výkonu - nyní"
+      },
+      "power_production_next_hour": {
+        "name": "Odhad výkonu - za hodinu"
+      },
+      "power_production_next_12hours": {
+        "name": "Odhad výkonu - za 12 hodin"
+      },
+      "power_production_next_24hours": {
+        "name": "Odhad výkonu - za 24 hodin"
+      },
+      "energy_current_hour": {
+        "name": "Odhad výroby - tato hodina"
+      },
+      "energy_next_hour": {
+        "name": "Odhad výroby - příští hodina"
+      }
+    }
+  }
+}

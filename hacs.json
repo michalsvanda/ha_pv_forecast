@@ -1,0 +1,5 @@
+{
+  "name": "PV Forecast (Open-Meteo)",
+  "homeassistant": "2025.2.0",
+  "render_readme": true
+}
